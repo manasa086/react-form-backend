@@ -18,9 +18,7 @@ app.get("/",async function(req,res){
     client= await mongoClient.connect(url);
     let db=client.db(dbname);
     client.close();
-    res.json({
-        message:"Hello"
-    })
+    res.send("Hello World")
     }
     catch(error)
     {
@@ -32,4 +30,4 @@ app.get("/",async function(req,res){
 
 })
 
-app.listen(3001);
+app.listen(PORT);
